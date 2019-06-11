@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RestTest</string>
+    <string name="name_placeholder">Name</string>
+    <string name="number_placeholder">Number</string>
+    <string name="type_placeholder">Type</string>
+    <string name="pokemon_info_title">Pokemon Info</string>
+    <string name="pokemon_list_title">Pokemon List</string>
+    <string name="home_title">Pokemon List</string>
+
+</resources>
