@@ -14,7 +14,7 @@ import com.ntg.resttest.domain.info.Sprites;
 import com.ntg.resttest.domain.info.Stat;
 import com.ntg.resttest.domain.info.Type;
 
-public class PokemonInfo {
+public class PokemonInfo implements Serializable {
 
     @SerializedName("abilities")
     @Expose
@@ -151,6 +151,8 @@ public class PokemonInfo {
     public String getName() {
         return name;
     }
+
+    public String getFormattedName() { return (name.substring(0, 1).toUpperCase() + name.substring(1)).replace("-", " "); }
 
     public void setName(String name) {
         this.name = name;

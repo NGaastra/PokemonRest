@@ -19,8 +19,6 @@ public class Pokemon implements Serializable {
 
     private static final String TAG = "POKEMON";
 
-    private PokemonInfo info;
-
     @SerializedName("name")
     @Expose
     private String name;
@@ -28,6 +26,14 @@ public class Pokemon implements Serializable {
     @Expose
     private String url;
 
+    private transient PokemonInfo info;
+
+    public Pokemon(){}
+
+    public Pokemon(String name, String url) {
+        this.name = name;
+        this.url = url;
+    }
 
     public String getName() {
         return name;

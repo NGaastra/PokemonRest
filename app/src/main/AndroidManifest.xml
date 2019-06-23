@@ -11,9 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.PokemonInfoActivity" android:parentActivityName=".activities.PokemonListActivity" android:label="@string/pokemon_info_title" />
-        <activity android:name=".activities.PokemonListActivity" android:parentActivityName=".activities.MainActivity" android:label="@string/pokemon_list_title" />
-        <activity android:name=".activities.MainActivity" android:label="@string/home_title" >
+        <activity
+            android:name=".activities.PokemonListActivity"
+            android:label="@string/pokemon_list_title"
+            android:parentActivityName=".activities.PokedexActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".activities.PokemonInfoActivity"
+            android:label="@string/pokemon_info_title"
+            android:parentActivityName=".activities.PokedexActivity" />
+        <activity
+            android:name=".activities.PokedexActivity"
+            android:label="@string/pokedex_title"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -2,11 +2,9 @@ package com.ntg.resttest.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,9 +12,12 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.ntg.resttest.R;
 import com.ntg.resttest.domain.Pokemon;
-import com.ntg.resttest.ifs.RecyclerViewClickListener;
+import com.ntg.resttest.interfaces.PokedexSingleton;
+import com.ntg.resttest.interfaces.RecyclerViewClickListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonRecyclerViewAdapter.ViewHolder>{
 
@@ -41,7 +42,7 @@ public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonRecy
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Pokemon p = dataset.get(position);
-        holder.nameTextView.setText(p.getName());
+        holder.nameTextView.setText(p.getFormattedName());
         holder.numberTextView.setText("# " + (position + 1));
 
 

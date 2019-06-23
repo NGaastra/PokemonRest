@@ -1,4 +1,4 @@
-package com.ntg.resttest.ifs;
+package com.ntg.resttest.interfaces;
 
 import android.view.View;
 

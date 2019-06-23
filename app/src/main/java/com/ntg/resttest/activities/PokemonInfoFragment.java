@@ -1,5 +1,6 @@
 package com.ntg.resttest.activities;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -25,9 +26,7 @@ public class PokemonInfoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_pokemon_info, container, false);
-        view.setVisibility(View.INVISIBLE);
-        return view;
+        return inflater.inflate(R.layout.fragment_pokemon_info, container, false);
     }
 
     public void setPokemon(Pokemon pokemon) {

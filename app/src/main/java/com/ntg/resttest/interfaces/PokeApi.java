@@ -24,8 +24,11 @@ public interface PokeApi {
     @GET("pokemon/{id}")
     Call<PokemonInfo> getPokemonInfoById(@Path("id") int id);
 
+    @GET("pokemon/{name}")
+    Call<PokemonInfo> getPokemonInfoByName(@Path("name") String name);
+
     @GET
-    Single<PokemonInfo> getPokemonInfo(@Url String url);
+    Call<PokemonInfo> getPokemonInfo(@Url String url);
 
     @GET
     Single<PokemonListLink> getFromUrl(@Url String url);
